@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" type="image/svg+xml" href="Homepage Images/KimbroEntLogo.svg">
+        <title>Kimbro Entertainment Directing</title>
+        <link href="https://fonts.googleapis.com/css?family=Lato: 100,300,400,700|Luckiest+Guy|Oxygen:300,400" rel="stylesheet">
+        <link rel="stylesheet" href="CSS/Homepage.CSS">
+        <script src="JS/MichaelKim.js" defer></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--<script src="JS/main.js"></script>-->
+              
+      <style>
+        a {/* Changes text color */
+          color: #000000;                        /* Changes text color */
+          text-decoration-line: underline;       /* Ensures the line is visible */
+          text-decoration-color: #0000;       /* Changes underline color independently */
+          text-decoration-thickness: 2px;       /* Optional: changes underline thickness */
+        }
+      </style>
+      </head>
+
+  <body>
+<!-- CLICKABLE INTERACTION ITEM, Lightboxes -->
+<div id="lightbox" class="hidden">
+    <div id="lightbox-content">
+      <img id="lightbox-img" src="" alt="">
+      <video id="lightbox-video" class="hidden" controls></video>
+      <iframe id="lightbox-youtube" class="hidden" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>    
+    <!-- <div class="gapMaker"></div> -->
+    <div id="arrow-and-captions">
+      <div id="closeContainer">
+      <span id="lightbox-close" onclick="closeLightbox()">&#10540;</span>
+      </div>
+      <div id="lightbox-caption"></div>
+        <div id="lightbox-arrows">
+          <span id="lightbox-prev" onclick="changeSlide(-1)">&#9655;</span>
+          <span id="lightbox-next" onclick="changeSlide(1)">&#9655;</span>
+        </div>
+    </div>
+  </div>
+  <iframe id="lightbox-youtube" class="hidden" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<!-- CLICKABLE INTERACTION ITEM, lightboxes -->
+
+<div class="flexbox">
+
+<div class="scroller">
+    <div class="sticky-follow">
+    <div class="details-wrapper">
+    <div class="icon-crop">
+      <button class="summary-toggle"><p>—<br>—<br>—</p></button>
+    </div>
+        <div class="scroll-button">
+            <ul class="anchorBar">
+              <li class="anchorbar-item"><a href="index.html">Home</a></li>
+              <li class="anchorbar-item"><a href="Directing.html">Directing</a></li>
+              <li class="anchorbar-item"><a href="Editing.html">Editing</a></li>
+              <li class="anchorbar-item"><a href="Writing.html">Writing</a></li>
+              <li class="anchorbar-item"><a href="https://www.youtube.com/@KimbroEntertainment" target="_blank">My Channel</a></li>
+              <li class="anchorbar-item"><a href="AboutPage.html">About</a></li>
+              <li class="anchorbar-item" id="ContactForPhones"><a href="#ContactMe">Contact Me</a></li>
+            </ul>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<div class="blockbox">
+  <div class="mainLogoTiny"><!--Page-Title Flex Wrapper-->
+    <a href="index.html"><img src="Homepage Images/KimbroEntLogo.svg" alt="Kimbro Entertainment logo"/></a><!--makes the logo clickable-->
+  <h1 class="Page-Title">Directing</h1>
+  </div>
+
+<img class="characters" src="Homepage Images/Mittens Director.png" alt="Kimbro Entertainment logo"/>    
+    <div class="text-label">
+        <h2>Films, Animations, Cinematography and more...</h2>
+    </div>
+
+    <div class="Portfolio-Grid">
+
+        <div class="project-portfolio-divider">
+        <div class="project-numbering-box">
+          <div class="project-item">
+            <img src="Website Graphics/Animation/Blank Notice/1 BN work.jpg"
+            alt="Magazine" style="height:100%; width: 100%;"  
+            data-images='[{"type":"youtube","src":"VGnrLfl15Lw"},
+            {"type":"image","src":"Website Graphics/Animation/Blank Notice/1 BN work.jpg"}, 
+            {"type":"image","src":"Website Graphics/Animation/Blank Notice/2 BN work.jpg"},
+            {"type":"image","src":"Website Graphics/Animation/Blank Notice/Biohazard concept art.jpg"}]' 
+            data-caption="<strong>Blank Notice</strong><br><br> As superheroes begin disappearing after their secret identities are exposed by the detective agency Blank Notice, the sudden emergence of a new hero—Paragon—threatens everything. Forced into a desperate race to save their business, the agency uncovers unsettling clues about the true motives of their enigmatic leader, Dr. Blank.<br> Role: Director<br><br> <a href='https://www.youtube.com/watch?v=VGnrLfl15Lw' target='_blank'> LINK </a>" 
+            onclick="openLightbox(this)"/>        
+            <div class="item-overlay">
+              <span class="project-item-title">Blank Notice</span>
+            </div>
+          </div>       
+        <h1 style="color: white;">&nbsp;1</h1>
+        </div>
+        </div>
+
+        <div class="project-portfolio-divider">
+        <div class="project-numbering-box">
+          <div class="project-item">
+            <img src="Website Graphics/Animation/Blank Notice/Biohazard concept art.jpg"
+            alt="Video Game" style="height:100%; width: 100%;"  
+            data-images='[{"type":"youtube","src":"VGnrLfl15Lw"},
+            {"type":"image","src":"Website Graphics/Animation/Blank Notice/1 BN work.jpg"}, 
+            {"type":"image","src":"Website Graphics/Animation/Blank Notice/2 BN work.jpg"},
+            {"type":"image","src":"Website Graphics/Animation/Blank Notice/Biohazard concept art.jpg"}]' 
+            data-caption="<strong>Title</strong><br><br>Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah.<br> Role: Director<br><br> <a href='https://www.youtube.com/watch?v=VGnrLfl15Lw' target='_blank'> LINK </a>" 
+            onclick="openLightbox(this)"/>
+            <div class="item-overlay">
+              <span class="project-item-title">Title</span>
+            </div>
+          </div>
+          <h1 style="color: white;">&nbsp;2</h1>
+        </div>
+        </div>
+        
+      
+        <div class="project-portfolio-divider">
+        <div class="project-numbering-box">
+          <div class="project-item"> 
+            <img src="Homepage Images/Michael's image.jpg"
+            alt="Video Game" style="height:100%; width: 100%;"  
+            data-images='[{"type":"youtube","src":"VGnrLfl15Lw"},
+            {"type":"image","src":"Website Graphics/Animation/Blank Notice/1 BN work.jpg"}, 
+            {"type":"image","src":"Website Graphics/Animation/Blank Notice/2 BN work.jpg"},
+            {"type":"image","src":"Website Graphics/Animation/Blank Notice/Biohazard concept art.jpg"}]' 
+            data-caption="<strong>Title</strong><br><br>Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah.<br> Role: Director<br><br> <a href='https://www.youtube.com/watch?v=VGnrLfl15Lw' target='_blank'> LINK </a>" 
+            onclick="openLightbox(this)"/>
+            <div class="item-overlay">
+              <span class="project-item-title">Title</span>
+            </div>
+          </div>
+          <h1 style="color: white;">&nbsp;3</h1>
+        </div>
+        </div>
+      
+        <div class="project-portfolio-divider">
+        <div class="project-numbering-box">
+          <div class="project-item">
+            <img src="Homepage Images/Michael's image.jpg"
+            alt="Video Game" style="height:100%; width: 100%;"  
+            data-images='[{"type":"youtube","src":"VGnrLfl15Lw"},
+            {"type":"image","src":"Website Graphics/Animation/Blank Notice/1 BN work.jpg"}, 
+            {"type":"image","src":"Website Graphics/Animation/Blank Notice/2 BN work.jpg"},
+            {"type":"image","src":"Website Graphics/Animation/Blank Notice/Biohazard concept art.jpg"}]' 
+            data-caption="<strong>Title</strong><br><br>Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah.<br> Role: Director<br><br> <a href='https://www.youtube.com/watch?v=VGnrLfl15Lw' target='_blank'> LINK </a>" 
+            onclick="openLightbox(this)"/>
+            <div class="item-overlay">
+              <span class="project-item-title">Title</span>
+            </div>
+          </div>
+          <h1 style="color: white;">&nbsp;4</h1>
+        </div>
+        </div>
+      
+        <div class="project-portfolio-divider">
+        <div class="project-numbering-box">
+          <div class="project-item">
+            <img src="Homepage Images/Michael's image.jpg"
+            alt="Video Game" style="height:100%; width: 100%;"  
+            data-images='[{"type":"youtube","src":"VGnrLfl15Lw"},
+            {"type":"image","src":"Website Graphics/Animation/Blank Notice/1 BN work.jpg"}, 
+            {"type":"image","src":"Website Graphics/Animation/Blank Notice/2 BN work.jpg"},
+            {"type":"image","src":"Website Graphics/Animation/Blank Notice/Biohazard concept art.jpg"}]' 
+            data-caption="<strong>Title</strong><br><br>Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah.<br> Role: Director<br><br> <a href='https://www.youtube.com/watch?v=VGnrLfl15Lw' target='_blank'> LINK </a>" 
+            onclick="openLightbox(this)"/>
+            <div class="item-overlay">
+              <span class="project-item-title">Title</span>
+            </div>
+          </div>
+          <h1 style="color: white;">&nbsp;5</h1>
+        </div>
+        </div>
+
+    </div>
+
+        <div class="gapMaker"></div>
+
+      </div>
+    </div>
+
+    <footer class="footer">
+        <h2 class="Sans-Serif-Title" id="ContactMe">Contact Me</h2>
+        <div class="Contact-Me" id="ContactMe">
+        <ul class="contact-info">
+            <li class="contact-item"><strong class="bolded-item1">Phone:</strong><br>  650-575-5282</li>
+        <div style=" height: 0.5px; background-color: white; margin-bottom: 10px;"></div><!--DIVIDING BAR for readabilty-->
+            <li class="contact-item"><a href="mailto:Mazamia101@gmail.com"><strong class="bolded-item1">Email:</strong><br>  Mazamia101@gmail.com</a></li>
+        <div style=" height: 0.5px; background-color: white; margin-bottom: 10px;"></div><!--DIVIDING BAR for readabilty-->
+            <li class="contact-item"><a href="https://www.youtube.com/@KimbroEntertainment" target="_blank"><strong class="bolded-item1">Youtube:</strong><br>  youtube.com/@KimbroEntertainment</a></li>
+        <div style=" height: 0.5px; background-color: white; margin-bottom: 10px;"></div><!--DIVIDING BAR for readabilty-->
+          </ul>
+        <ul class="contact-info">
+            <li class="contact-item"><a href="https://www.linkedin.com/in/michael-kim-3a13941a9/" target="_blank"><strong class="bolded-item1">Linkedin:</strong><br>  linkedin.com/in/michael-kim-3a13941a9/</a></li>
+        <div style=" height: 0.5px; background-color: white; margin-bottom: 10px;"></div><!--DIVIDING BAR for readabilty-->
+            <li class="contact-item"><a href="https://www.linkedin.com/in/michael-kim-3a13941a9/" target="_blank"><strong class="bolded-item1">Instagram:</strong><br>  linkedin.com/in/michael-kim-3a13941a9/</a></li>
+        <div style=" height: 0.5px; background-color: white; margin-bottom: 10px;"></div><!--DIVIDING BAR for readabilty-->
+            <li class="contact-item"><a href="https://www.linkedin.com/in/michael-kim-3a13941a9/" target="_blank"><strong class="bolded-item1">X:</strong><br>  linkedin.com/in/michael-kim-3a13941a9/</a></li>
+        <div style=" height: 0.5px; background-color: white; margin-bottom: 10px;"></div><!--DIVIDING BAR for readabilty-->
+          </ul>
+        <ul class="contact-info">
+            <li class="contact-item"><a href="https://www.linkedin.com/in/michael-kim-3a13941a9/" target="_blank"><strong class="bolded-item1">Facebook:</strong><br>  linkedin.com/in/michael-kim-3a13941a9/</a></li>
+          <div style=" height: 0.5px; background-color: white; margin-bottom: 10px;"></div><!--DIVIDING BAR for readabilty-->
+            <li class="contact-item"><a href="https://www.linkedin.com/in/michael-kim-3a13941a9/" target="_blank"><strong class="bolded-item1">LetterBox:</strong><br>  linkedin.com/in/michael-kim-3a13941a9/</a></li>
+          <div style=" height: 0.5px; background-color: white; margin-bottom: 10px;"></div><!--DIVIDING BAR for readabilty-->
+          </ul>
+        </div>
+        <div class="extraSpace"></div><!--BLACK SPACE IN CASE OF PHONE SCREEN INTERFACE-->
+    </footer>
+  </body>
+</html>

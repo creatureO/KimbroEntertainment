@@ -1,0 +1,1261 @@
+@font-face {
+    src: url('fonts/IndoorKid/IndoorKidVariable[EMPH,slnt,wdth,wght].woff2') format("woff2"),
+         url('fonts/IndoorKid/IndoorKidVariable[EMPH,slnt,wdth,wght].woff') format("woff");
+    font-family: 'IndoorKid';
+    font-style: normal oblique 0deg 15deg;
+    font-weight: 300 700;
+    }
+    
+@font-face {
+    src: url('fonts/IndoorKid/IndoorKidVariable[EMPH,slnt,wdth,wght].woff2') format("woff2"),
+         url('fonts/IndoorKid/IndoorKidVariable[EMPH,slnt,wdth,wght].woff') format("woff");
+    font-family: 'IndoorKid';
+    font-style: oblique 0deg 15deg;
+    font-weight: 300 700;
+    }
+
+@font-face{
+    src: url('fonts/CartoonyStuff/RoundedBar-Regular.ttf') format("truetype");
+    font-family:'RoundedBar';
+}
+
+@font-face{
+    src: url(fonts/LouisGeorgeCafe/Louis\ George\ Cafe.ttf) format("truetype");
+    font-family:'GeorgeLouis';
+}
+
+@font-face{
+    src: url(fonts/LouisGeorgeCafe/Louis\ George\ Cafe\ Light.ttf) format("truetype");
+    font-family:'GeorgeLouisLight';
+}
+
+*{
+    font-family: 'GeorgeLouis';
+    /*border:solid black 1px;*/
+}
+
+body{
+    margin:0px;
+    background: radial-gradient(circle, #B3CCFF, #669EFF);
+    overflow-x: hidden;
+}
+/*THE CONTAINER OF THE SCROLLER AND BLOCK BOX ===================================================================================================================== */
+.flexbox{ 
+    display:flex;
+    /*border:solid 5px red;*/
+}
+
+.blockbox{
+    display:block;
+    overflow-x: hidden;
+}
+
+
+/*THE SCROLLER ===================================================================================================================== */
+/* Allow height transitions to interpolate from 0 to auto */
+.scroller{
+    z-index: 100;
+}
+
+.sticky-follow{
+    position: sticky;
+    top: 0;
+    /*border: 5px solid aqua;*/
+}
+
+.scroll-button {/* Force content to always render — override the browser's native display:none */
+    width: 0px;
+    overflow: hidden;
+    transition: width 0.4s ease;
+    white-space: nowrap;
+}
+
+.scroll-button.is-open {
+    width: 400px;
+}
+
+.icon-crop {
+    height: 100px;       /* pick your desired visible height */
+    overflow: hidden;
+    align-items: center;
+}
+
+.summary-toggle{
+    display:flex;
+    line-height: 1vw;
+    font-size: 4vw;
+    font-weight:lighter;
+    align-items:end;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+button{
+    background-color: rgba(255, 255, 255, 0.0);
+    color:white;
+    padding-bottom: -100px;
+    margin-bottom: -100px;
+    width:100%;
+    cursor:context-menu;
+    border:none;
+}
+
+.summary-toggle p{
+  margin:20px 0px;
+}
+
+
+.anchorbar-item{
+    font-size: 25px;
+    line-height: 80px;
+    color: white;
+    list-style-type: none; /* Removes the bullet points */
+    font-weight:lighter;
+}
+
+.anchorbar-item a{
+    font-size: 25px;
+    color: white;
+}
+
+/* HEAD TITLE ITEMS ===================================================================================================================== */
+.Title-Card{
+    display:block;
+    /*border: 1px solid black;*/
+    padding: 10vw;
+}
+
+.mainLogo{
+    display:flex;
+    justify-content: center;         /* Centers the image horizontally */
+    align-items: center;             /* Centers the image vertically */
+    padding-bottom: 5vw;
+    padding-top:5vw;
+    /*border:solid black*/
+}
+
+.mainLogo img{
+  width:10vw; 
+}
+
+.mainLogoTiny{
+  display:flex; 
+  column-gap: 1vw; 
+  align-items: center;   
+  justify-content: flex-end;
+  padding: 20px 0px;
+}
+
+.mainLogoTiny img{
+ width:50px;
+}
+
+h1 {
+display:block;
+}
+
+.Title-Words {
+    font-family: 'RoundedBar', sans-serif;
+    letter-spacing: 1em; /* Pulls letters closer together */
+    display:flex;
+    text-align: center;
+    font-size: 3vw;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically */
+    color: white;
+    /*border:solid black*/
+}
+
+.Title-Words-Line-2{
+  font-family: 'RoundedBar', sans-serif;
+  letter-spacing: 1em; /* Pulls letters closer together */
+  display:flex;
+  text-align: center;
+  font-size: 3vw;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;     /* Centers vertically */
+  color: white;
+  /*border:solid black*/
+}
+
+.Page-Title {
+    font-family: 'GeorgeLouis', sans-serif;
+    font-weight: 900;
+    display:flex;
+    font-size: 50px;
+    padding-top:0.5vw;
+    padding-bottom:0.5vw;
+    padding-right:3vw;
+    margin:0px;
+    justify-content: right;
+    align-items: center;     /* Centers vertically */
+    color: white;
+    /*border:solid black*/
+}
+
+.Page-Title a{
+    margin-right:-4%;
+    text-align: right;
+    z-index: 100;
+}
+
+/*DETAILING TEXT STUFF ===================================================================================================================== */
+h2 {
+  font-weight: 400;
+  font-style: normal;
+}
+
+  .text-chunk{
+    display:block;
+    max-width: 450px;
+    padding: 1.6vw 4.4vw;
+    margin: 25px 0px;
+    color: white;
+    font-size: 25px;
+    font-weight: 100;
+    line-height: 35px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+    border-radius: 10px;
+  }
+
+  .Sans-Serif-Title{
+    font-weight: 900;
+    color:white;
+    white-space: nowrap;
+}
+
+ .text-label{
+  font-size: 1.5em;
+  font-weight: 100;
+  line-height: 35px;
+    display:flex;
+    width: 65%;
+    padding: 1.6vw 4.4vw;
+    margin:0px;
+    color: white;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+    border-top-left-radius: 10px;
+ }
+
+.text-label-Featured-Work{
+  font-size: 1.5em;
+  font-weight: 100;
+  line-height: 35px;
+    display:flex;
+    width: 65%;
+    padding: 1.6vw 4.4vw;
+    margin:0px;
+    color: white;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+    border-top-left-radius: 10px;
+}
+
+ .category-label{ /* Regular Button */
+    display:flex;
+    gap:100px;
+    padding: 1.6vw 4.4vw;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin: 0px 0px;
+    width: 60%;
+    transition: width 1s ease-in-out, height 3s ease-in-out, background-color 1s ease, border-radius 1s ease;
+ }
+
+ .category-label-2{ /* Youtube Button */
+    display:flex;
+    gap:50px;
+    padding: 1.6vw 4.4vw;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+    border-radius: 10px;
+    margin: 10px 0px;
+    width: 55%;
+    transition: width 1s ease-in-out, height 3s ease-in-out, background-color 1s ease; 
+}
+
+
+.category-label-2 img{ /* Youtube Button */
+  width:2.5vw;
+}
+
+.category-label:hover{ 
+  height:8%;
+  width: 75%;
+  background: rgba(0, 0, 0, 0.50);
+  border-top-right-radius: 2vw;
+  border-bottom-right-radius: 2vw;
+}/* Regular Button */
+
+.category-label-2:hover{ /* ---------- Youtube Button ---------- */
+  width: 65%;
+  background:red;
+}
+
+.category-label:hover .section-image{ /* ---------- Mittens Blue ---------- */
+ max-height:100%
+}
+
+.category-label:hover .section-image2{ /* ---------- Poppy Pink ---------- */
+  max-height:100%
+}
+
+.category-label:hover .section-image3{ /* ---------- Shibo Yellow ---------- */
+ max-height:100%
+}
+
+.category-label img{
+  border-radius: 100px;
+  aspect-ratio: 16 / 9; 
+  object-fit: cover;
+  width: 8%;
+  max-height: 100px;
+  object-position: 0px 200px;
+  transition: object-position 1s ease, width 1s ease, border-radius 1s ease; 
+}
+
+.category-label:hover img{
+  object-position: 0px 35%;
+  width: 75%;
+  border-radius: 5px;
+}
+
+ .section-label{ /* Regular Button Text*/
+    color:white;
+    font-weight: 100;
+ }
+
+/*DETAILING IMAGES ===================================================================================================================== */
+ .section-image{
+    background-color: rgb(82, 125, 209); /* ---------- Mittens Blue ---------- */
+ }
+
+ .section-image2{
+    background-color: pink; /* ---------- Poppy Pink ---------- */
+ }
+
+ .section-image3{
+    background-color: rgb(227, 191, 113); /* ---------- Shibo Yellow ---------- */
+ }
+
+ .gap{
+background-color: white;
+height: 1px;  
+width:75%
+}
+
+/*NON USED right now ========================================================== */
+/*Animation scroll*/
+ .marquee-wrapper {
+    max-width:100vw;
+    border-left: solid rgba(0, 0, 0, 0.2);
+}
+  
+.marquee-track {
+    display: flex;
+    gap: 20px;
+    width: fit-content;
+    animation: scroll-left 10s linear infinite;
+}
+  
+@keyframes scroll-left {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-30%); }
+}
+  
+/*.marquee-wrapper:hover .marquee-track {
+    animation-play-state: paused;
+}*/
+
+/*PRIMARY PORTFOLIO IMAGES ===================================================================================================================== */
+.Portfolio-Grid{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-left:0%;
+    margin-right:20%;
+    margin-top:1%;
+    margin-bottom:1%;
+}/*indivisual project page (directing, editing, writing)_______________*/
+
+
+    .project-portfolio-divider{
+        display:block; 
+        align-content: center;
+        justify-content: center;
+        border-bottom: 1px solid white; 
+    }
+
+    .project-portfolio-divider img{
+    position: relative;
+    margin-top: -25%;
+    object-fit: cover;
+    }
+
+    .project-numbering-box {
+        position: relative; /* anchors the number's absolute positioning to this box */
+    }
+    
+    .project-numbering-box h1 {
+        position: absolute;
+        left: 10px;         /* adjust to taste */
+        bottom: 10px;        /* or top, depending on where you want the number */
+        margin: 0;
+        color: white;
+    }
+
+    .project-item{
+        max-width: 80%;
+        max-height: 5vw;
+        overflow: hidden;
+        position: relative;
+        transform-origin: center; /* anchors the bottom edge, grows upward */
+        border-width: 0px; 
+        transition: max-width 0.5s ease, max-height 0.5s ease, border-radius 1s ease, border-width 0.5s ease;
+        -webkit-mask-image: linear-gradient(to right, black 50%, black 0%, transparent 100%);
+        mask-image: linear-gradient(to right, black 0%, black 50%, transparent 100%); 
+    }
+    
+    .project-item:hover{
+        max-width: 100%;
+        max-height: 40vw;
+        border-top-right-radius: 10vw;
+        border-bottom-right-radius: 10vw;        
+        border-color: rgb(255,255,255,1); 
+        border-width: 5px;
+        -webkit-mask-image: linear-gradient(to right, black 100%, transparent 0%);
+        mask-image: linear-gradient(to right, black 100%, transparent 0%);
+    }
+
+/*indivisual project page (directing, editing, writing)_______________*/
+.workRow {
+    display: grid;
+    grid-template-columns: repeat(5,1fr); /* 1fr, auto-fit, or 300px also works */
+    width:90%;
+    gap: 0px;                            /* Adds spacing between items */
+    overflow-x:hidden;        /* Enables horizontal scrolling when content overflows */
+    overflow-y:hidden;      /* Hides vertical scrolling */
+    scroll-behavior: smooth;
+  }
+
+  .workRow img{
+    width: 100%;        /* Forces the image to match cell width */
+    height: 100%;       /* Forces the image to match cell height */
+    object-fit: cover;  /* Crops and scales cleanly without squishing */
+    object-position: center; /* Keeps the middle of the photo visible */
+  }
+
+
+.portfolio-item{
+    overflow: hidden;
+    object-fit: cover;
+    transform-origin: center; /* anchors the bottom edge, grows upward */
+    transition: transform 1s ease;
+    /*border: 0.5px solid black;*/
+  }
+
+.portfolio-item:hover {
+    transform: scale(1.2) translateY(0px);
+} 
+  .item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);   /* fully transparent by default */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;                      /* invisible until hovered */
+    transition: all 0.3s ease;       /* smooth fade in/out */
+    pointer-events: none;   /* lets clicks pass through to the image underneath */
+  }
+  
+  .portfolio-item:hover .item-overlay {
+    background: rgba(0, 0, 0, 0.75);  /* darkens on hover */
+    opacity: 1;
+  }
+
+  .project-item:hover .item-overlay {
+    background: rgba(0, 0, 0, 0.75);  /* darkens on hover in project page*/
+    opacity: 1;
+  }
+  
+  .item-title {
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    padding: 10px;
+    font-weight: 100;
+  }
+
+  .project-item-title {
+    color: white;
+    font-size: 5rem;
+    text-align: center;
+    padding: 10px;
+    font-weight: 100;
+  }
+  /*^ animation scroll ^*/
+
+/*CLICKABLE IMAGES FUNCTION ===================================================================================================================== */
+  .hidden {
+    display: none;
+  }
+  
+  #lightbox {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to right, rgb(0,0,0,0.8), rgb(0,0,0,1), rgb(0,0,0,1), rgb(0,0,0,1), rgb(0,0,0,1), rgb(0,0,0,0.8));
+    z-index: 1000;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;  
+}
+  
+  #lightbox.hidden {
+    display: none;   /* now wins over #lightbox's display: flex */
+  }
+  
+  #lightbox-content {
+    display:flex;
+    gap: 85px;
+    width: 80vw;
+    max-height: 60vw;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #lightbox-img {
+    max-height: 85vh;
+    max-width: 60vw;
+    object-fit: contain;
+    padding-right: 5vw;
+  }
+
+  #lightbox-youtube{
+    position: relative;
+    width: 1200px;
+    height: 675px;  
+    padding-right: 5vw;
+  }
+
+  #arrow-and-captions{ /*options to close and flip through items_______________*/
+    position:static;
+    top: 4vw;
+    right: 60px;
+    max-width: 15vw;
+    display:block;
+    /*border:solid red;*/
+  }
+  
+  #lightbox-caption {
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'GeorgeLouisLight';
+  }
+
+  #lightbox-caption strong{ /*can make the title different style and size*/
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 900;
+  }
+
+
+#lightbox-caption a{ /*can make the link different style and size*/
+    color: white;
+    font-size: 1.4rem;
+    font-family:'GeorgeLouis';
+    font-weight:bolder;
+    text-decoration: none;
+    transform-origin: center;
+    opacity: 75%;
+    transition: opacity 1s ease, font-size 1s ease, text-decoration 2s ease-in-out;
+}
+
+#lightbox-caption:hover a{
+    color: white;
+    opacity: 100%;
+    font-size: 2rem;
+    text-decoration: underline;
+}
+
+#closeContainer{
+    display:flex;
+    justify-content: right;
+    padding:10px;
+}
+
+  #lightbox-close {
+    position:absolute;
+    top:2.5vw;
+    right: 5vw;
+    color: white;
+    font-size:8rem;
+    font-weight:lighter;
+    cursor: pointer;
+    transform-origin: bottom;
+    transition: font-size 0.5s ease,font-weight 0.5s ease;
+  }
+
+  #lightbox-close:hover {
+    color: white;
+    font-size:12rem;
+    font-weight:bolder;
+    cursor: pointer;
+  }
+
+  #lightbox-arrows{
+    display:flex;
+    position: absolute;
+    bottom:3vw;
+    right: 5vw;
+  }
+
+    /*cilckable arrows for multi stack*/
+  #lightbox-prev, #lightbox-next {
+    color: white;
+    font-size: 5rem;
+    cursor: pointer;
+    padding: 10px 10px;
+    user-select: none; /* prevents the arrow text from being selected/highlighted on click */
+    transform-origin: bottom;
+    transition:font-size 0.5s ease;
+  }
+
+  #lightbox-prev:hover, #lightbox-next:hover {
+    font-size: 6rem;
+  }
+  
+  #lightbox-prev {
+    left: 20px;
+    transform: scale(-1,1);
+}
+  
+  #lightbox-next {
+    right: 20px;
+  }
+/*options to close and flip through items_______________*/
+  
+
+  .gapMaker{
+    height: 100px; /* Adjust thickness as needed */
+    background-color: rgba(255, 255, 255, 0.0);
+    width: 100%; /* Spans the full width */
+    margin: 0px; /* Space above and below the bar */
+  }
+  
+/*CLICKABLE IMAGES FUNCTION, Lightboxes*/
+
+
+
+/* LOBBY IMAGE ITEMS (ABOUT PAGE and Porfolio pages) ===================================================================================================================== */
+  .lobby-image {
+    max-width: 90%;
+    max-height: 50%;
+    overflow: hidden;
+    display:block;
+    border-radius: 10px;
+  }
+
+  .lobby-image img{
+    width: 100%;
+    height:100%;
+  }
+  
+  .lobby-image video {
+    display: block;   /* removes inline-element whitespace quirks */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .lobby-image iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 56.25vw;      /* maintains 16:9 (9/16 = 0.5625) */
+    min-width: 177.78vh;  /* 16/9 = 1.7778 — ensures full width coverage even on tall/narrow screens */
+    min-height: 100%;
+    transform: translate(-50%, -50%);  /* re-centers after oversizing */
+    border: none;
+    pointer-events: none;
+  }/* homepage image or video */
+
+  .characters{
+    height:22vw; 
+    width: 39vw; 
+    margin-bottom:-4px
+  }
+
+/* FOOTER ===================================================================================================================== */
+footer{
+    background-color: black;
+    padding: 1.6vw 8.3vw;
+    display:flex;
+    column-gap:50px
+}
+
+.Contact-Me{
+    display:flex;
+    line-height: 35px;
+    flex-wrap: wrap;
+    column-gap: 30px;
+}
+
+
+#contactMe{
+    color:white
+}
+
+.contact-info{
+    list-style-type: none; /* Removes the bullet points */
+    padding-left: 0px;
+    color: white;
+}
+
+.contact-item a{
+    color: white;
+}
+
+/*.contact-item strong{ font-weight: 900; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 10px; }*/
+
+.contact-info strong{
+    font-size: x-large;
+}
+
+.extraSpace{
+height:20vw;
+display:block;
+}
+
+/*FOR PHONE INTERFACES =============================================================================================================================================================================== */
+/* =============================================================================================================================================================================== */
+/* =============================================================================================================================================================================== */
+/* =============================================================================================================================================================================== */
+/* =============================================================================================================================================================================== */
+/* Mobile-friendly overrides (for screens 768px wide or smaller) */
+@media screen and (max-width: 900px) {
+  
+  /* HEAD TITLE ITEMS ===================================================================================================================== */
+.Title-Card{
+  display:block;
+  /*border: 1px solid black;*/
+  padding: 10vw;
+}
+
+.mainLogo{
+  display:flex;
+  justify-content: center;         /* Centers the image horizontally */
+  align-items: center;             /* Centers the image vertically */
+  padding-bottom: 5vw;
+  padding-top:5vw;
+  /*border:solid black*/
+}
+
+.mainLogo img{
+width:15vw; 
+}
+
+.mainLogoTiny{
+  display:flex; 
+  column-gap: 2vw; 
+  align-items: center;   
+  justify-content: flex-end;
+}
+
+.mainLogoTiny img{
+width:25px;
+}
+
+h1 {
+display:block;
+font-size:1.5em;
+}
+
+.Title-Words {
+  font-size:2em;
+  letter-spacing: 0.1em;
+}
+
+.Title-Words-Line-2{
+  letter-spacing: 1em; /* Pulls letters closer together */
+  font-size: 1.25em;
+  /*border:solid black*/
+}
+
+.Page-Title {
+  font-family: 'GeorgeLouis', sans-serif;
+  font-weight: 500;
+  display:flex;
+  font-size: 1.5em;
+  padding-top:4vw;
+  padding-bottom:4vw;
+  padding-right: 1vw;  
+  margin:0px;
+  justify-content: right;
+  align-items: center;     /* Centers vertically */
+  color: white;
+  /*border:solid black*/
+}
+h2 {
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5em;
+}
+
+/*DETAILING TEXT STUFF ===================================================================================================================== */
+  .text-chunk{
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 25px;
+    display:block;
+    max-width: 450px;
+    padding: 1.6vw 4.4vw;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-right: 25px;
+    color: white;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+    border-radius: 10px;
+  }
+
+  .text-chunk h2{
+    font-size: 1.5em;
+    line-height: 35px;
+  }
+
+  .Sans-Serif-Title{
+    font-size:35px;
+    font-weight: 400;
+    color:white;
+    white-space: wrap;
+}
+
+ .text-label{
+    display:none;
+    width: 65%;
+    padding: 1.6vw 4.4vw;
+    margin:0px;
+    color: white;
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 25px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+    border-top-left-radius: 10px;
+ }
+
+ .text-label-Featured-Work{
+  display:none;
+ }
+
+ .category-label-2{
+  width:70vw;
+ }
+
+ .category-label-2 img{ /* Youtube Button */
+  width:10vw;
+}
+
+/* BLOCK BOX ON PHONE ===================================================================================================================== */
+.flexbox{ 
+  display:flex;
+  /*border:solid 5px red;*/
+}
+
+.blockbox{
+  display:block;
+  overflow-x: hidden;
+  margin-bottom: 10vw;
+  padding-left: 12vw;
+  padding-right:5vw;
+}
+
+/* SCROLLER STUFF ON PHONE =====================================================================================================================*/
+/* Allow height transitions to interpolate from 0 to auto */
+.scroller{
+  z-index: 100;
+  position:fixed;
+  height:100vh;
+}
+
+.sticky-follow{
+  position: sticky;
+  top: 0px;
+  /*border: 5px solid aqua;*/
+}
+/* Force content to always render — override the browser's native display:none */
+.scroll-button {
+  width: 0px;
+  overflow: hidden;
+  transition: width 0.4s ease;
+  white-space: nowrap;
+}
+
+.scroll-button.is-open {
+  width: 250px;
+}
+
+.icon-crop {
+  height: 100px;/* pick your desired visible height */
+  overflow: hidden;
+  align-items: center;
+  border-bottom-right-radius: 2.5vw;
+}
+
+.summary-toggle{
+  display:flex;
+  line-height: 0.5em;
+  font-size: 2em;
+  font-weight:lighter;
+  align-items:end;
+  padding-left: 5vw;
+  padding-right: 5vw;  
+}
+
+.summary-toggle p{
+  margin:30px 0px;
+}
+
+button{
+  background-color: rgba(255, 255, 255, 0.0);
+  color:white;
+  padding-bottom: -100px;
+  margin-bottom: -100px;
+  width:100%;
+  cursor:context-menu;
+  border:none;
+}
+
+button.clicked {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  -webkit-mask-image: linear-gradient(to right, black 50%, black 0%, transparent 100%);
+  mask-image: linear-gradient(to right, black 0%, black 50%, transparent 100%); 
+}
+
+.details-wrapper{
+  background-color:#0000009f;
+  height:100px;/* nav bar open icon */
+  border-bottom-right-radius: 2.5vw;
+  transition: background-color 1s ease, height 0.5s ease;
+}
+
+.details-wrapper.clicked{
+  background-color:#fffffff0;
+  height:fit-content;
+}
+
+.anchorbar-item{
+  font-size: 25px;
+  line-height: 10vh;
+  color: white;
+  list-style-type: none; /* Removes the bullet points */
+  font-weight:lighter;
+}
+.anchorbar-item a{
+  color:black;
+}
+
+#ContactForPhones{
+  display:none;
+  pointer-events: none;
+}
+
+/* LOBBY IMAGE STUFF ON PHONE ===================================================================================================================== */
+.lobby-image {
+  max-width: 90%;
+  max-height: 100%;
+  overflow: hidden;
+  display:block;
+  border-radius: 10px;
+}
+
+.lobby-image img{
+  width: 100%;
+  height:100%;
+}
+
+.lobby-image video {
+  display: block;   /* removes inline-element whitespace quirks */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.lobby-image iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 56.25vw;      /* maintains 16:9 (9/16 = 0.5625) */
+  min-width: 177.78vh;  /* 16/9 = 1.7778 — ensures full width coverage even on tall/narrow screens */
+  min-height: 100%;
+  transform: translate(-50%, -50%);  /* re-centers after oversizing */
+  border: none;
+  pointer-events: none;
+}/* homepage image or video */
+
+.characters{
+  height:44vw; 
+  width: 78vw; 
+  margin-bottom:-4px
+}
+
+.workRow {
+  display: none;
+}
+
+/*PRIMARY PORTFOLIO IMAGES ===================================================================================================================== */
+.Portfolio-Grid{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  margin-left:0%;
+  margin-right:5%;
+  margin-top:0%;
+  margin-bottom:1%;
+}/*indivisual project page (directing, editing, writing)_______________*/
+
+
+  .project-portfolio-divider{
+      display:block; 
+      align-content: center;
+      justify-content: center;
+      border-bottom: 1px solid white; 
+  }
+
+  .project-portfolio-divider img{
+  position: relative;
+  margin-top: -5%;
+  object-fit: cover;
+  }
+
+  .project-numbering-box {
+      position: relative; /* anchors the number's absolute positioning to this box */
+  }
+  
+  .project-numbering-box h1 {
+      position: absolute;
+      left: 10px;         /* adjust to taste */
+      bottom: 10px;        /* or top, depending on where you want the number */
+      margin: 0;
+      color: white;
+  }
+
+  .project-item{
+      max-width: 100%;
+      max-height: 20vw;
+      overflow: hidden;
+      position: relative;
+      transform-origin: center; /* anchors the bottom edge, grows upward */
+      border-width: 0px; 
+      transition: max-width 0.5s ease, max-height 0.5s ease, border-radius 1s ease, border-width 0.5s ease;
+      -webkit-mask-image: linear-gradient(to right, black 70%, black 0%, transparent 100%);
+      mask-image: linear-gradient(to right, black 0%, black 70%, transparent 100%); 
+  }
+  
+  .project-item:hover{
+      max-width: 100%;
+      max-height: 40vw;
+      border-top-right-radius: 10vw;
+      border-bottom-right-radius: 10vw;        
+      border-color: rgb(255,255,255,1); 
+      border-width: 5px;
+      -webkit-mask-image: linear-gradient(to right, black 100%, transparent 0%);
+      mask-image: linear-gradient(to right, black 100%, transparent 0%);
+  }
+
+  .category-label{ /* Regular Button */
+    display:flex;
+    gap:100px;
+    width:70vw;
+  }
+
+/*CLICKABLE IMAGES FUNCTION ===================================================================================================================== */
+.hidden {
+  display: none;
+}
+
+#lightbox {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(to right, rgb(0,0,0,0.8), rgb(0,0,0,1), rgb(0,0,0,1), rgb(0,0,0,1), rgb(0,0,0,1), rgb(0,0,0,0.8));
+  z-index: 1000;
+  overflow-y: auto;
+  display:block;
+}
+
+#lightbox.hidden {
+  display: none;   /* now wins over #lightbox's display: flex */
+}
+
+#lightbox-content {
+  display:flex;
+  gap: 85px;
+  padding-left:10vw;
+  padding-right:10vw;
+  padding-top:6rem;
+  padding-bottom:5vw;
+  max-width: 100%;
+  max-height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+#lightbox-youtube{
+  height: 40vw;
+  max-width: 80vw;
+}
+
+#lightbox-img {
+  height: 80vw;
+  max-width: 80vw;
+  object-fit: contain;
+}
+
+#arrow-and-captions{ /*options to close and flip through items_______________*/
+  position: static;
+  max-width: 80vw;
+  display:block;
+  padding:0vw 10vw;
+  margin-bottom:15vw;
+  /*border:solid red;*/
+}
+
+#lightbox-caption {
+  color: white;
+  font-size: 1.5rem;
+  font-family: 'GeorgeLouisLight';
+  width: 80vw;
+}
+
+#lightbox-caption strong{ /*can make the title different style and size*/
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+
+#lightbox-caption a{ /*can make the link different style and size*/
+  color: white;
+  font-size: 1.4rem;
+  font-family:'GeorgeLouis';
+  font-weight:bolder;
+  text-decoration: none;
+  transform-origin: center;
+  opacity: 75%;
+  transition: opacity 1s ease, font-size 1s ease, text-decoration 2s ease-in-out;
+}
+
+#lightbox-caption:hover a{
+  color: white;
+  opacity: 100%;
+  font-size: 2rem;
+  text-decoration: underline;
+}
+
+#closeContainer{
+  display:flex;
+  justify-content: right;
+  padding:10px;
+}
+
+#lightbox-close {
+position:absolute;
+font-size:4rem;
+top:2vw;
+right: 5vw;
+z-index: 900;
+}
+
+#lightbox-close:hover {
+  color: white;
+  font-size:8rem;
+  font-weight:bolder;
+  cursor: pointer;
+}
+
+#lightbox-arrows{
+  display:flex;
+  column-gap: 10vw;
+  position: absolute;
+  top:2.5vw;
+  left: 8vw;
+  height:fit-content
+}
+
+  /*cilckable arrows for multi stack*/
+#lightbox-prev, #lightbox-next {
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+  padding: 10px 10px;
+  user-select: none; /* prevents the arrow text from being selected/highlighted on click */
+  transform-origin: bottom;
+  transition:font-size 0.5s ease;
+}
+
+#lightbox-prev:hover, #lightbox-next:hover {
+  font-size: 2.5rem;
+}
+
+#lightbox-prev {
+  left: 20px;
+  transform: scale(-1,1);
+}
+
+#lightbox-next {
+  right: 20px;
+}
+/*options to close and flip through items_______________*/
+/*CLICKABLE IMAGES FUNCTION, Lightboxes*/
+
+
+
+
+/* FOOTER STUFF ON PHONE===================================================================================================================== */
+footer{
+  background-color: black;
+  padding: 1.6vw 8.3vw;
+  display:block;
+}
+
+footer .Sans-Serif-Title{
+font-size: 1.5em;
+}
+
+.Contact-Me{
+  display:block;
+}
+
+#contactMe{
+  color:white
+}
+
+.contact-info{
+  list-style-type: none; /* Removes the bullet points */
+  padding-left: 0px;
+  color: white;
+}
+
+.contact-item a{
+  color: white;
+}
+
+.extraSpace{
+height:15vw;
+display:block;
+}
+
+.gapMaker{
+  display:none;
+}
+
+
+}
+/* End of phone=============================================================================================================================================================================== */
