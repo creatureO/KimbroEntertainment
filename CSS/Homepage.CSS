@@ -896,7 +896,7 @@ h2 {
 }
 
 .scroll-button.is-open {
-  width: 250px;
+  width: 200px;
 }
 
 .icon-crop {
@@ -912,8 +912,8 @@ h2 {
   font-size: 2em;
   font-weight:lighter;
   align-items:end;
-  padding-left: 5vw;
-  padding-right: 5vw;  
+  padding-left: 2.5vw;
+  padding-right: 2.5vw;  
 }
 
 .summary-toggle p{
@@ -938,8 +938,10 @@ button.clicked {
 }
 
 .details-wrapper{
-  background-color:#0000009f;
+  margin-top: 10px;
+  background-color:#00000040;
   height:100px;/* nav bar open icon */
+  border-top-right-radius: 2.5vw;
   border-bottom-right-radius: 2.5vw;
   transition: background-color 1s ease, height 0.5s ease;
 }
@@ -950,13 +952,13 @@ button.clicked {
 }
 
 .anchorbar-item{
-  font-size: 25px;
   line-height: 10vh;
   color: white;
   list-style-type: none; /* Removes the bullet points */
   font-weight:lighter;
 }
 .anchorbar-item a{
+  font-size: 0.75em;
   color:black;
 }
 
